@@ -1,5 +1,6 @@
 {
   "name": "language-lustre",
+  "main": "./lib/language-lustre",
   "version": "0.0.1",
   "description": "Syntax highlighting for Lustre language.",
   "keywords": [
@@ -7,9 +8,11 @@
     "grammar",
     "Lustre"
   ],
-  "repository": "https://github.com/atom/language-lustre",
+  "repository": "https://github.com/Arxwel/language-lustre",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
   }
 }

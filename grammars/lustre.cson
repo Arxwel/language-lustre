@@ -9,7 +9,16 @@
 'patterns': [
   {
     'match': '^\\s*--.*$'
-    'name': 'comment.lus'
+    'name': 'comment.line.double-dash'
+  }
+  {
+    'begin': '\\*'
+    'captures':
+      '0':
+          'name': 'punctuation.definition.comment'
+    'end': '\\*'
+    'name': 'comment.block'
+
   }
   {
     'match': '\\b(package|model|provides|needs|body|end|uses)\\b'
@@ -17,68 +26,52 @@
   }
   {
     'match': '\\b(returns|var|let|tel|assert)\\b'
-    'name' : 'keywords.statement.lus'
+    'name' : 'storage.type'
   }
   {
     'match': '\\b(case|goto)\\b'
-    'name' : 'keywords.label.lus'
+    'name' : 'keyword.control'
   }
   {
     'match': '\\b(if|then|else)\\b'
-    'name' : 'keywords.condition.lus'
+    'name' : 'keyword.control'
   }
   {
     'begin': '\''
     'end': '\''
-    'name': 'string.lus'
-  }
-  {
-    'match': '\<[a-zA-Z_][a-zA-Z0-9_]*\>'
-    'name': 'identifier.lus'
-  }
-  {
-    'match': '[()]'
-    'name': 'delimiter.lus'
-  }
-  {
-    'match': '[][]'
-    'name': 'matrix.delimiter.lus'
-  }
-  {
-    'match': '[[0-9]\+\.\.[0-9]\+]'
-    'name': 'matrix.delimiter.lus'
+    'name': 'string.single'
   }
   {
     'match': '\<[0-9]\+\>'
-    'name': 'number.lus'
+    'name': 'constant.numeric'
   }
   {
     'match': '\<[0-9]\+\.[0-9]*\(e[-+]\=[0-9]\+\)\=\>'
-    'name': 'float.lus'
+    'name': 'constant.numeric'
   }
   {
     'match': '\.[0-9]\+\(e[-+]\=[0-9]\+\)\=\>'
-    'name': 'float.lus'
+    'name': 'constant.numeric'
   }
   {
     'match': '\<[0-9]\+e[-+]\=[0-9]\+\>'
-    'name': 'float.lus'
+    'name': 'constant.numeric'
   }
   {
     'match': '[#+/*=><^]'
-    'name': 'operator.lus'
+    'name': 'keyword.operator.js'
   }
   {
     'match': '>='
-    'name': 'operator.lus'
+    'name': 'keyword.operator.js'
   }
   {
     'match': '<='
-    'name': 'operator.lus'
+    'name': 'keyword.operator.js'
   }
   {
     'match': '<>'
-    'name': 'operator.lus'
+    'name': 'keyword.operator.js'
   }
   {
     'match': '<<'
@@ -90,42 +83,38 @@
   }
   {
     'match': '-'
-    'name': 'operator.lus'
+    'name': 'keyword.operator.js'
   }
   {
     'match': '->'
-    'name': 'operator.lus'
-  }
-  {
-    'match': '--.*'
-    'name': 'comment.lus'
+    'name': 'keyword.operator.js'
   }
   {
     'match': '\\b(true|false)\\b'
-    'name': 'keywords.constant.lus'
+    'name': 'constant.language'
   }
   {
     'match': '\\b(and|or|not|xor)\\b'
-    'name': 'keywords.operator.lus'
+    'name': 'keyword.operator'
   }
   {
     'match': '\\b(div|mod)\\b'
-    'name': 'keywords.operator.lus'
+    'name': 'keyword.operator.js'
   }
   {
     'match': '\\b(pre|current|when)\\b'
-    'name': 'keywords.operator.lus'
+    'name': 'keyword.operator.js'
   }
   {
     'match': '\\b(bool|int|real|map|red|fill)\\b'
-    'name': 'keywords.type.lus'
+    'name': 'storage.type'
   }
   {
     'match': '\\b(node|function|type|const)\\b'
-    'name': 'keywords.function.lus'
+    'name': 'storage.type'
   }
   {
     'match': '\\b(extern|unsafe)\\b'
-    'name': 'keywords.function.lus'
+    'name': 'storage.modifier'
   }
 ]
