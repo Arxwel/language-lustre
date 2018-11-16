@@ -1,0 +1,131 @@
+# If this is your first time writing a language grammar, check out:
+#   - https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/
+
+'scopeName': 'source.lustre'
+'name': 'Lustre'
+'fileTypes': [
+  'lus'
+]
+'patterns': [
+  {
+    'match': '^\\s*--.*$'
+    'name': 'comment.lus'
+  }
+  {
+    'match': '\\b(package|model|provides|needs|body|end|uses)\\b'
+    'name' : 'keywords.pack.lus'
+  }
+  {
+    'match': '\\b(returns|var|let|tel|assert)\\b'
+    'name' : 'keywords.statement.lus'
+  }
+  {
+    'match': '\\b(case|goto)\\b'
+    'name' : 'keywords.label.lus'
+  }
+  {
+    'match': '\\b(if|then|else)\\b'
+    'name' : 'keywords.condition.lus'
+  }
+  {
+    'begin': '\''
+    'end': '\''
+    'name': 'string.lus'
+  }
+  {
+    'match': '\<[a-zA-Z_][a-zA-Z0-9_]*\>'
+    'name': 'identifier.lus'
+  }
+  {
+    'match': '[()]'
+    'name': 'delimiter.lus'
+  }
+  {
+    'match': '[][]'
+    'name': 'matrix.delimiter.lus'
+  }
+  {
+    'match': '[[0-9]\+\.\.[0-9]\+]'
+    'name': 'matrix.delimiter.lus'
+  }
+  {
+    'match': '\<[0-9]\+\>'
+    'name': 'number.lus'
+  }
+  {
+    'match': '\<[0-9]\+\.[0-9]*\(e[-+]\=[0-9]\+\)\=\>'
+    'name': 'float.lus'
+  }
+  {
+    'match': '\.[0-9]\+\(e[-+]\=[0-9]\+\)\=\>'
+    'name': 'float.lus'
+  }
+  {
+    'match': '\<[0-9]\+e[-+]\=[0-9]\+\>'
+    'name': 'float.lus'
+  }
+  {
+    'match': '[#+/*=><^]'
+    'name': 'operator.lus'
+  }
+  {
+    'match': '>='
+    'name': 'operator.lus'
+  }
+  {
+    'match': '<='
+    'name': 'operator.lus'
+  }
+  {
+    'match': '<>'
+    'name': 'operator.lus'
+  }
+  {
+    'match': '<<'
+    'name': 'type.lus'
+  }
+  {
+    'match': '>>'
+    'name': 'type.lus'
+  }
+  {
+    'match': '-'
+    'name': 'operator.lus'
+  }
+  {
+    'match': '->'
+    'name': 'operator.lus'
+  }
+  {
+    'match': '--.*'
+    'name': 'comment.lus'
+  }
+  {
+    'match': '\\b(true|false)\\b'
+    'name': 'keywords.constant.lus'
+  }
+  {
+    'match': '\\b(and|or|not|xor)\\b'
+    'name': 'keywords.operator.lus'
+  }
+  {
+    'match': '\\b(div|mod)\\b'
+    'name': 'keywords.operator.lus'
+  }
+  {
+    'match': '\\b(pre|current|when)\\b'
+    'name': 'keywords.operator.lus'
+  }
+  {
+    'match': '\\b(bool|int|real|map|red|fill)\\b'
+    'name': 'keywords.type.lus'
+  }
+  {
+    'match': '\\b(node|function|type|const)\\b'
+    'name': 'keywords.function.lus'
+  }
+  {
+    'match': '\\b(extern|unsafe)\\b'
+    'name': 'keywords.function.lus'
+  }
+]
